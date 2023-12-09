@@ -6,6 +6,8 @@
     xmlns:local="using:WinUI3NavigationExample.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
     <Grid>
@@ -15,10 +17,10 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" x:Name="FilterPanel" Grid.Row="0" HorizontalAlignment="Stretch">
             <ToggleButton x:Name="FreeOnlyBtn" x:Uid="FreeOnlyBtn" Click="FreeOnlyBtnClick"  Margin="0 10 10 10" VerticalAlignment="Bottom"/>
-            <NumberBox x:Name="MinAreaBox" x:Uid="MinAreaBox" ValueChanged="MinAreaBoxValueChanged" SpinButtonPlacementMode="Inline" SmallChange="1" LargeChange="10" Width="250" Margin="10 10 10 10" VerticalAlignment="Bottom"/>
-            <NumberBox x:Name="MaxCostBox" x:Uid="MaxCostBox" ValueChanged="MaxCostBoxValueChanged" SpinButtonPlacementMode="Inline" SmallChange="100" LargeChange="1000" Width="250" Margin="10 10 10 10" VerticalAlignment="Bottom"/>
-            <ComboBox x:Name="WearhouseTypeBox" x:Uid="WearhouseTypeBox" SelectionChanged="WearhouseTypeBoxSelectionChanged" Width="200" Margin="10 10 10 10" VerticalAlignment="Bottom"/>
-            <ToggleButton x:Name="OnlyMineBtn" x:Uid="OnlyMineBtn" Click="OnlyMineBtnClick"  Margin="10 10 10 10" VerticalAlignment="Bottom"/>
+            <NumberBox x:Name="MinAreaBox" x:Uid="MinAreaBox" ValueChanged="MinAreaBoxValueChanged" SpinButtonPlacementMode="Inline" SmallChange="1" LargeChange="10" MinWidth="50" MaxWidth="250"  Margin="10 10 10 10" VerticalAlignment="Bottom"/>
+            <NumberBox x:Name="MaxCostBox" x:Uid="MaxCostBox" ValueChanged="MaxCostBoxValueChanged" SpinButtonPlacementMode="Inline" SmallChange="100" LargeChange="1000" MinWidth="50" MaxWidth="250" Margin="10 10 10 10" VerticalAlignment="Bottom"/>
+            <ComboBox x:Name="WearhouseTypeBox" x:Uid="WearhouseTypeBox" SelectionChanged="WearhouseTypeBoxSelectionChanged" Width="150" Margin="10 10 10 10" VerticalAlignment="Bottom"/>
+            <ToggleButton x:Name="OnlyMineBtn" x:Uid="OnlyMineBtn" Click="OnlyMineBtnClick"  Margin="10 10 50 10" VerticalAlignment="Bottom"/>
         </StackPanel>
         <ScrollView HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Visible" Grid.Row="1" Margin="0 10 50 10">
             <ListView x:Name="WearhousesList" ItemClick="WearhousesListItemClick" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
@@ -33,12 +35,12 @@
                                 <ColumnDefinition Width="3*"/>
                                 <ColumnDefinition Width="2*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" x:Uid="WearhouseNumberHeader" Style="{ThemeResource TitleTextBlockStyle}"/>
-                            <TextBlock Grid.Column="1" x:Uid="WearhouseStatusHeader" Style="{ThemeResource TitleTextBlockStyle}"/>
-                            <TextBlock Grid.Column="2" x:Uid="WearhouseAreaHeader" Style="{ThemeResource TitleTextBlockStyle}"/>
-                            <TextBlock Grid.Column="3" x:Uid="WearhouseAddresHeader" Style="{ThemeResource TitleTextBlockStyle}"/>
-                            <TextBlock Grid.Column="4" x:Uid="WearhouseTypeHeader" Style="{ThemeResource TitleTextBlockStyle}"/>
-                            <TextBlock Grid.Column="5" x:Uid="WearhousePriceHeader" Style="{ThemeResource TitleTextBlockStyle}"/>
+                            <TextBlock Grid.Column="0" x:Uid="WearhouseNumberHeader" Style="{ThemeResource BodyStrongTextBlockStyle}"/>
+                            <TextBlock Grid.Column="1" x:Uid="WearhouseStatusHeader" Style="{ThemeResource BodyStrongTextBlockStyle}"/>
+                            <TextBlock Grid.Column="2" x:Uid="WearhouseAreaHeader" Style="{ThemeResource BodyStrongTextBlockStyle}"/>
+                            <TextBlock Grid.Column="3" x:Uid="WearhouseAddresHeader" Style="{ThemeResource BodyStrongTextBlockStyle}"/>
+                            <TextBlock Grid.Column="4" x:Uid="WearhouseTypeHeader" Style="{ThemeResource BodyStrongTextBlockStyle}"/>
+                            <TextBlock Grid.Column="5" x:Uid="WearhousePriceHeader" Style="{ThemeResource BodyStrongTextBlockStyle}"/>
                         </Grid>
                     </DataTemplate>
                 </ListView.HeaderTemplate>

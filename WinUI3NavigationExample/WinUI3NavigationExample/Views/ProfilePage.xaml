@@ -24,12 +24,6 @@
                 <TextBlock x:Uid="Welcome" Style="{StaticResource HeaderTextBlockStyle}" Margin="0 10 10 10"/>
                 <TextBlock x:Name="UsernameBlock" Text="%username%" Style="{StaticResource HeaderTextBlockStyle}" Margin="10 10 10 10"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" x:Name="MoneyPanel" Visibility="Collapsed">
-                <TextBlock x:Uid="Money" Margin="0 10 10 10" VerticalAlignment="Center"/>
-                <TextBlock x:Name="MoneyCountBlock"  Text="0.00" Margin="10 10 10 10" VerticalAlignment="Center"/>
-                <Button x:Name="PutMoneyBtn" x:Uid="PutMoney" Style="{StaticResource AccentButtonStyle}" Click="PutMoneyBtnClick" Margin="10 10 10 10" VerticalAlignment="Center" Visibility="Collapsed"/>
-                <Button x:Name="GetMoneyBtn" x:Uid="GetMoney" Style="{StaticResource AccentButtonStyle}" Click="GetMoneyBtnClick" Margin="10 10 10 10" VerticalAlignment="Center" Visibility="Visible"/>
-            </StackPanel>
             <StackPanel Orientation="Horizontal" x:Name="WearhousesPanel" Visibility="Collapsed">
                 <TextBlock x:Uid="YourWearhouses" Margin="0 10 10 10" VerticalAlignment="Center"/>
                 <TextBlock x:Name="WearhousesCountBlock" Text="0" Margin="10 10 10 10" VerticalAlignment="Center"/>

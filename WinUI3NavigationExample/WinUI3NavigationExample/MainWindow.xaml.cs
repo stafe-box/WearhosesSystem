@@ -24,10 +24,13 @@ namespace WinUI3NavigationExample
     /// </summary>
     public sealed partial class MainWindow : Window
     {
-        public static NavigationView NV;
         public MainWindow()
         {
             this.InitializeComponent();
+            IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+            var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 1700, Height = 800});
 
             NavigationViewControl.SelectedItem = NavigationViewControl.MenuItems.OfType<NavigationViewItem>().First();
             ContentFrame.Navigate(
@@ -41,7 +44,7 @@ namespace WinUI3NavigationExample
 
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(AppTitleBar);
-            NV = this.NavigationViewControl;
+
         }
 
         public string GetAppTitleFromSystem()

@@ -3,11 +3,38 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WinUI3NavigationExample.Views"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    xmlns:ui="using:CommunityToolkit.WinUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="Settings"/>
+        <StackPanel Orientation="Vertical">
+            <controls:SettingsCard
+                        x:Uid="HighContrast"
+                        HeaderIcon="{ui:FontIcon Glyph=&#xF08C;}"
+                        IsEnabled="True"
+                        Margin="0 10 50 10"
+                        VerticalAlignment="Top">
+            <Button x:Name="GoToHighContrast" x:Uid="Go" Click="GoToHighContrast_Click" Style="{StaticResource AccentButtonStyle}"/>
+            </controls:SettingsCard>
+            <controls:SettingsCard
+                           x:Uid="Scale"
+                           HeaderIcon="{ui:FontIcon Glyph=&#xE7F4;}"
+                           IsEnabled="True"
+                           Margin="0 10 50 10"
+                           VerticalAlignment="Top">
+                <Button x:Name="GoToScale" x:Uid="Go" Click="GoToScale_Click"/>
+            </controls:SettingsCard>
+            <controls:SettingsCard
+                   x:Uid="FontScale"
+                   HeaderIcon="{ui:FontIcon Glyph=&#xE8D2;}"
+                   IsEnabled="True"
+                   Margin="0 10 50 10"
+                   VerticalAlignment="Top">
+                <Button x:Name="GoToFontScale" x:Uid="Go" Click="GoToFontScale_Click"/>
+            </controls:SettingsCard>
+        </StackPanel>
     </Grid>
 </Page>

@@ -26,9 +26,9 @@ namespace WinUI3NavigationExample.Views
         public WearhousesPage()
         {
             this.InitializeComponent();
-            WearhousesList.Items.Add(new Wearhouse() { ID = 1, Status = true, Area = 200.15f, Addres = "Улица Пушкиа, дом Колотушкина", Type = "Як Гараж", Price = 300 });
-            WearhousesList.Items.Add(new Wearhouse() { ID = 2, Status = false, Area = 15.15f, Addres = "Где-где, в Караганде", Type = "Дырка в полу", Price = 100500 });
-            WearhousesList.Items.Add(new Wearhouse() { ID = 3, Status = true, Area = 0.30f, Addres = "Вулиця М.Грушевського будинок 5, місто Київ, Україна", Type = "Ячейка", Price = 14.88f });
+            WearhousesList.Items.Add(new Wearhouse() { ID = 1, Status = true, Area = 200.15f, Addres = "Улица Пушкиа, дом Колотушкина", Type = "Как Гараж", Price = 300 });
+            WearhousesList.Items.Add(new Wearhouse() { ID = 2, Status = false, Area = 15.15f, Addres = "Где-где, в Караганде", Type = "контейнер для еды", Price = 100500 });
+            WearhousesList.Items.Add(new Wearhouse() { ID = 3, Status = true, Area = 0.30f, Addres = "Ещё какой-то адрес", Type = "Ячейка", Price = 14.88f });
         }
 
         public void FreeOnlyBtnClick(object sender, RoutedEventArgs e)

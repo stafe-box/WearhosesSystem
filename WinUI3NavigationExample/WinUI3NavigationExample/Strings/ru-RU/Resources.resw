@@ -120,23 +120,50 @@
   <data name="AddWearhouseBtn.Content" xml:space="preserve">
     <value>Добавить склад</value>
   </data>
+  <data name="DocumentBox.Header" xml:space="preserve">
+    <value>Серия и номер документа</value>
+  </data>
+  <data name="DocumentBox.PlaceholderText" xml:space="preserve">
+    <value>XX XX XXXXXX</value>
+  </data>
+  <data name="DocumentCombo.Header" xml:space="preserve">
+    <value>Тип докумена</value>
+  </data>
+  <data name="DocumentCombo.PlaceholderText" xml:space="preserve">
+    <value>Документ</value>
+  </data>
+  <data name="DocumentInfo.Text" xml:space="preserve">
+    <value>Сейчас займёмся заполнением документов, для начала укажите в качестве кого вы регистрируетесь.</value>
+  </data>
   <data name="EmailBox.Header" xml:space="preserve">
     <value>Почта</value>
   </data>
   <data name="EmailBox.PlaceholderText" xml:space="preserve">
     <value>email@example.com</value>
   </data>
+  <data name="FontScale.Header" xml:space="preserve">
+    <value>Размер текста</value>
+  </data>
+  <data name="FontSclae.Description" xml:space="preserve">
+    <value>Перейти к настройкам размера текста Windows</value>
+  </data>
   <data name="FreeOnlyBtn.Content" xml:space="preserve">
-    <value>Только свободные</value>
+    <value>Cвободные</value>
   </data>
   <data name="FreeOnlyBtn.ToolTipService.ToolTip" xml:space="preserve">
     <value>Отображать только свободные склады</value>
   </data>
-  <data name="GetMoney.Content" xml:space="preserve">
-    <value>Снять Средства</value>
+  <data name="Go.Content" xml:space="preserve">
+    <value>Перейти</value>
   </data>
   <data name="Greeteng.Text" xml:space="preserve">
     <value>Давайте заполним основные данные: ФИО и контаные данные</value>
+  </data>
+  <data name="HighContrast.Description" xml:space="preserve">
+    <value>Перейти к настройкам контрастных тем Windows</value>
+  </data>
+  <data name="HighContrast.Header" xml:space="preserve">
+    <value>Высокая контрастность</value>
   </data>
   <data name="Home.Content" xml:space="preserve">
     <value>Домашняя страница</value>
@@ -151,7 +178,7 @@
     <value>Максимальная цена ₽</value>
   </data>
   <data name="MaxCostBox.PlaceholderText" xml:space="preserve">
-    <value>Максимальная цена</value>
+    <value>0.00 ₽</value>
   </data>
   <data name="MaxCostBox.ToolTipService.ToolTip" xml:space="preserve">
     <value>Максимальная цена в рублях</value>
@@ -160,7 +187,7 @@
     <value>Минимальная Площадь М²</value>
   </data>
   <data name="MinAreaBox.PlaceholderText" xml:space="preserve">
-    <value>Минимальная Площадь</value>
+    <value>0.00 М²</value>
   </data>
   <data name="MinAreaBox.ToolTipService.ToolTip" xml:space="preserve">
     <value>Минимальная площадь в квадратных метрах</value>
@@ -172,7 +199,7 @@
     <value>Имя</value>
   </data>
   <data name="NameBox.PlaceholderText" xml:space="preserve">
-    <value>Имя</value>
+    <value>Иавн</value>
   </data>
   <data name="NextPageBtn.Content" xml:space="preserve">
     <value>Далее</value>
@@ -187,7 +214,7 @@
     <value>Отчество</value>
   </data>
   <data name="PatronymicBox.PlaceholderText" xml:space="preserve">
-    <value>Отчество</value>
+    <value>Иванович</value>
   </data>
   <data name="PhoneNumberBox.Header" xml:space="preserve">
     <value>Номер телефона</value>
@@ -198,20 +225,32 @@
   <data name="Profile.Content" xml:space="preserve">
     <value>Личный кабинет</value>
   </data>
-  <data name="PutMoney.Content" xml:space="preserve">
-    <value>Внести Средства</value>
+  <data name="Scale.Description" xml:space="preserve">
+    <value>Перейти к настройкам масштаба дисплея Windows</value>
+  </data>
+  <data name="Scale.Header" xml:space="preserve">
+    <value>Масштаб</value>
   </data>
   <data name="SignUpBtn.Content" xml:space="preserve">
     <value>Регистрация</value>
   </data>
+  <data name="SignUpSecondPageTitle.Text" xml:space="preserve">
+    <value>Регистрация 2/3</value>
+  </data>
   <data name="SingUpStartPageTitle.Text" xml:space="preserve">
     <value>Регистрация 1/3</value>
+  </data>
+  <data name="StatusCombo.Header" xml:space="preserve">
+    <value>Ваш статус</value>
+  </data>
+  <data name="StatusCombo.PlaceholderText" xml:space="preserve">
+    <value>Статус</value>
   </data>
   <data name="SurnameBox.Header" xml:space="preserve">
     <value>Фамилия</value>
   </data>
   <data name="SurnameBox.PlaceholderText" xml:space="preserve">
-    <value>Фамилия</value>
+    <value>Иванов</value>
   </data>
   <data name="WearhouseAddresHeader.Text" xml:space="preserve">
     <value>Адрес</value>

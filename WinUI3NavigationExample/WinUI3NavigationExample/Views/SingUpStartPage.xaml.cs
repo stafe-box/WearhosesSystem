@@ -109,7 +109,7 @@ namespace WinUI3NavigationExample.Views
 
         private void NextPageBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Views.SignUpSecondPage), null);
         }
 
         private void NameBox_TextChanged(object sender, TextChangedEventArgs e)

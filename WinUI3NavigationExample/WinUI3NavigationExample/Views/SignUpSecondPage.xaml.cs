@@ -1,4 +1,4 @@
-п»їusing Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -21,26 +21,28 @@ namespace WinUI3NavigationExample.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SettingsPage : Page
+    public sealed partial class SignUpSecondPage : Page
     {
-        public SettingsPage()
+        public SignUpSecondPage()
         {
             this.InitializeComponent();
         }
 
-        private async void GoToHighContrast_Click(object sender, RoutedEventArgs e)
+        private void StatusCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:easeofaccess-highcontrast"));
+            //в документ комбо пихаем только документы соответсвующие статусу
+            DocumentPanel.Visibility = Visibility.Visible;
         }
 
-        private async void GoToScale_Click(object sender, RoutedEventArgs e)
+        private void DocumentCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:display-advanced "));
+            //подгружаем маску
+            DocumentBox.IsEnabled = true;
         }
 
-        private async void GoToFontScale_Click(object sender, RoutedEventArgs e)
+        private void DocumentBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:easeofaccess-display"));
+
         }
     }
 }

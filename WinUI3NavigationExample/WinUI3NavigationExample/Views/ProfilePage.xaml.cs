@@ -42,9 +42,9 @@ namespace WinUI3NavigationExample.Views
 
         }
 
-        public void LogInBtnClick(object sender, RoutedEventArgs e)
+        public async void LogInBtnClick(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         public void SignUpBtnClick(object sender, RoutedEventArgs e)
