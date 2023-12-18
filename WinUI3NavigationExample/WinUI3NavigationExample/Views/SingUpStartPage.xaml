@@ -18,7 +18,7 @@
             <TextBox x:Name="PatronymicBox" x:Uid="PatronymicBox" Margin="10 10 10 10" MinWidth="250" TextChanged="PatronymicBox_TextChanged"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <TextBox x:Name="EmailBox" x:Uid="EmailBox" Margin="0 10 10 10" MinWidth="250" TextChanged="EmailBox_TextChanged" GotFocus="EmailBox_GotFocus"/>
+            <TextBox x:Name="EmailBox" x:Uid="EmailBox" Margin="0 10 10 10" MinWidth="250" TextChanged="EmailBox_TextChanged" GotFocus="EmailBox_GotFocus" LostFocus="EmailBox_LostFocus" Loaded="EmailBox_Loaded"/>
             <TextBox x:Name="PhoneNumberBox" x:Uid="PhoneNumberBox" Margin="10 10 10 10" MinWidth="250" TextChanged="PhoneNumberBox_TextChanged"/>
         </StackPanel>
         <Button x:Name="NextPageBtn" x:Uid="NextPageBtn" Width="250" Margin="0 10 10 10" Style="{StaticResource AccentButtonStyle}" Click="NextPageBtn_Click"/>

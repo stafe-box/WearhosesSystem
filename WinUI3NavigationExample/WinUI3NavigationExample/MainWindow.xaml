@@ -25,11 +25,11 @@
             </Grid.ColumnDefinitions>
             <Image
                 x:Name="AppFontIcon"
-                Width="16"
-                Height="16"
+                Width="22"
+                Height="22"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
-                Source="/Assets/Square44x44Logo.targetsize-48.png" />
+                Source="/Assets/icons8-warehouse-96.png" />
             <TextBlock
                 Margin="12,0,0,0"
                 Grid.Column="1"
@@ -68,9 +68,8 @@
                 </DataTemplate>
             </NavigationView.HeaderTemplate>
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Home" x:Uid="Home" Tag="WinUI3NavigationExample.Views.HomePage" />
-                <NavigationViewItem Icon="People" x:Uid="Profile" Tag="WinUI3NavigationExample.Views.ProfilePage" />
                 <NavigationViewItem Icon="Library" x:Uid="WearhousesNav" Tag="WinUI3NavigationExample.Views.WearhousesPage"/>
+                <NavigationViewItem Icon="People" x:Uid="Profile" Tag="WinUI3NavigationExample.Views.ProfilePage" />
                 <!--" NavigationViewItem Icon="Home" Content="Config" SelectsOnInvoked="False">
                     <NavigationViewItem.MenuItems>
                         <NavigationViewItem Icon="Save" Content="Menu Item2" Tag="SamplePage2" />
@@ -79,6 +78,9 @@
                         <NavigationViewItem Icon="Download" 
                 </NavigationViewItem-->
             </NavigationView.MenuItems>
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem Icon="Help" x:Uid="About" Tag="WinUI3NavigationExample.Views.HomePage" />
+            </NavigationView.FooterMenuItems>
             <Frame x:Name="ContentFrame" Navigated="ContentFrame_Navigated" Padding="55,10,0,0"/>
         </NavigationView>
     </Grid>

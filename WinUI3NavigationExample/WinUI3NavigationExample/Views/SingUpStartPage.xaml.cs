@@ -25,8 +25,13 @@ namespace WinUI3NavigationExample.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
+
+    
     public sealed partial class SingUpStartPage : Page
     {
+
+        private Microsoft.UI.Xaml.Media.LinearGradientBrush defColor;
         private string _phoneNumber = "";
         private int _pnPrev = 0;
         public SingUpStartPage()
@@ -120,6 +125,28 @@ namespace WinUI3NavigationExample.Views
         private void EmailBox_GotFocus(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void EmailBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            string inputString = EmailBox.Text;
+            string emailMask = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            Regex regex = new Regex(emailMask);
+
+            if (regex.IsMatch(inputString))
+            {
+                EmailBox.BorderBrush = defColor;
+            }
+            else
+            {
+                EmailBox.BorderBrush = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 0, 0));
+            }
+        }
+
+        private void EmailBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            defColor = (LinearGradientBrush)EmailBox.BorderBrush;
         }
     }
 }

@@ -15,13 +15,15 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" x:Name="FilterPanel" Grid.Row="0" HorizontalAlignment="Stretch">
+        <Viewbox Grid.Row="0" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal" x:Name="FilterPanel" HorizontalAlignment="Left">
             <ToggleButton x:Name="FreeOnlyBtn" x:Uid="FreeOnlyBtn" Click="FreeOnlyBtnClick"  Margin="0 10 10 10" VerticalAlignment="Bottom"/>
             <NumberBox x:Name="MinAreaBox" x:Uid="MinAreaBox" ValueChanged="MinAreaBoxValueChanged" SpinButtonPlacementMode="Inline" SmallChange="1" LargeChange="10" MinWidth="50" MaxWidth="250"  Margin="10 10 10 10" VerticalAlignment="Bottom"/>
             <NumberBox x:Name="MaxCostBox" x:Uid="MaxCostBox" ValueChanged="MaxCostBoxValueChanged" SpinButtonPlacementMode="Inline" SmallChange="100" LargeChange="1000" MinWidth="50" MaxWidth="250" Margin="10 10 10 10" VerticalAlignment="Bottom"/>
             <ComboBox x:Name="WearhouseTypeBox" x:Uid="WearhouseTypeBox" SelectionChanged="WearhouseTypeBoxSelectionChanged" Width="150" Margin="10 10 10 10" VerticalAlignment="Bottom"/>
             <ToggleButton x:Name="OnlyMineBtn" x:Uid="OnlyMineBtn" Click="OnlyMineBtnClick"  Margin="10 10 50 10" VerticalAlignment="Bottom"/>
         </StackPanel>
+        </Viewbox>
         <ScrollView HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Visible" Grid.Row="1" Margin="0 10 50 10">
             <ListView x:Name="WearhousesList" ItemClick="WearhousesListItemClick" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
                 <ListView.HeaderTemplate>

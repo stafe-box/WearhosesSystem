@@ -34,7 +34,7 @@ namespace WinUI3NavigationExample
 
             NavigationViewControl.SelectedItem = NavigationViewControl.MenuItems.OfType<NavigationViewItem>().First();
             ContentFrame.Navigate(
-                       typeof(Views.HomePage),
+                       typeof(Views.WearhousesPage),
                        null,
                        new Microsoft.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo()
                        );

@@ -17,7 +17,7 @@
                         IsEnabled="True"
                         Margin="0 10 50 10"
                         VerticalAlignment="Top">
-            <Button x:Name="GoToHighContrast" x:Uid="Go" Click="GoToHighContrast_Click" Style="{StaticResource AccentButtonStyle}"/>
+            <ToggleButton x:Name="GoToHighContrast" x:Uid="Switch" Click="GoToHighContrast_Click" Style="{StaticResource AccentButtonStyle}"/>
             </controls:SettingsCard>
             <controls:SettingsCard
                            x:Uid="Scale"
@@ -25,7 +25,7 @@
                            IsEnabled="True"
                            Margin="0 10 50 10"
                            VerticalAlignment="Top">
-                <Button x:Name="GoToScale" x:Uid="Go" Click="GoToScale_Click"/>
+                <ToggleButton x:Name="GoToScale" x:Uid="Switch" Click="GoToScale_Click"/>
             </controls:SettingsCard>
             <!--<controls:SettingsCard
                    x:Uid="FontScale"
