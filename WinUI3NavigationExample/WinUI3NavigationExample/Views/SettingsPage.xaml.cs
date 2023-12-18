@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Windows.Graphics.Display;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -12,6 +13,10 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
+using Windows.ApplicationModel.Core;
+using Windows.UI.Core;
+using System.Threading.Tasks;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -23,24 +28,48 @@ namespace WinUI3NavigationExample.Views
     /// </summary>
     public sealed partial class SettingsPage : Page
     {
+
+        private bool _isScaled = false;
+        private bool _isContrast = false;
         public SettingsPage()
         {
             this.InitializeComponent();
         }
 
+
         private async void GoToHighContrast_Click(object sender, RoutedEventArgs e)
         {
-            bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:easeofaccess-highcontrast"));
+            if (_isContrast)
+            {
+                HighContrast.Disable();
+                _isContrast = false;
+            }
+            else
+            {
+                HighContrast.Enable();
+                _isContrast = true;
+            }
+            //bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:easeofaccess-highcontrast"));
         }
 
         private async void GoToScale_Click(object sender, RoutedEventArgs e)
         {
-            bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:display-advanced "));
+            if (_isScaled)
+            {
+                Scaler.SetDefault();
+                _isScaled = false;
+            }
+            else
+            {
+                Scaler.SetBig();
+                _isScaled = true;
+            }
+            //bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:display-advanced "));
         }
 
-        private async void GoToFontScale_Click(object sender, RoutedEventArgs e)
+        /*private async void GoToFontScale_Click(object sender, RoutedEventArgs e)
         {
             bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:easeofaccess-display"));
-        }
+        }*/
     }
 }
