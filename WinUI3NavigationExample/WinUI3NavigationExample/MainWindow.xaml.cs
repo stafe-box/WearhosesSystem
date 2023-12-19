@@ -44,7 +44,7 @@ namespace WinUI3NavigationExample
 
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(AppTitleBar);
-
+            
         }
 
         public string GetAppTitleFromSystem()

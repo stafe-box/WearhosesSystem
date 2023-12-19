@@ -11,6 +11,9 @@
     <UseWinUI>true</UseWinUI>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\BIZUDPMincho-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="MultilingualResources\WinUI3NavigationExample.ru-RU.xlf" />
     <None Remove="Views\HomePage.xaml" />
     <None Remove="Views\ProfilePage.xaml" />

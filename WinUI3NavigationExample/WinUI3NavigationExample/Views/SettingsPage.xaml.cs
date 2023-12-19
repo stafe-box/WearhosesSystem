@@ -17,6 +17,7 @@ using Windows.UI.ViewManagement;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 using System.Threading.Tasks;
+using Windows.Globalization.Fonts;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -28,12 +29,14 @@ namespace WinUI3NavigationExample.Views
     /// </summary>
     public sealed partial class SettingsPage : Page
     {
-
+        public static string defaultFontFamalySource = "";
         private bool _isScaled = false;
         private bool _isContrast = false;
+        private bool _isFonted = false;
         public SettingsPage()
         {
             this.InitializeComponent();
+            
         }
 
 
@@ -67,9 +70,34 @@ namespace WinUI3NavigationExample.Views
             //bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:display-advanced "));
         }
 
-        /*private async void GoToFontScale_Click(object sender, RoutedEventArgs e)
+        private async void GoToFontScale_Click(object sender, RoutedEventArgs e)
         {
-            bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:easeofaccess-display"));
-        }*/
+            if (defaultFontFamalySource == "")
+            {
+                defaultFontFamalySource = FontFamily.Source;
+            }
+
+            if (_isFonted)
+            {
+                var ff = new FontFamily("arial");
+
+            }
+            else
+            {
+                var ff = new FontFamily("Times New Roman");
+
+                var rootFrame = Window.Current.Content as Frame;
+
+                if (rootFrame != null)
+                {
+                    rootFrame.FontFamily = ff;
+                }
+                
+            }
+
+
+
+            //bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:easeofaccess-display"));
+        }
     }
 }

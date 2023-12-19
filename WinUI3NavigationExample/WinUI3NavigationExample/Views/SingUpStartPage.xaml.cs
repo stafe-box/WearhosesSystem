@@ -148,5 +148,17 @@ namespace WinUI3NavigationExample.Views
         {
             defColor = (LinearGradientBrush)EmailBox.BorderBrush;
         }
+
+        private void PhoneNumberBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (PhoneNumberBox.Text.Length == 16)
+            {
+                PhoneNumberBox.BorderBrush = defColor;
+            }
+            else
+            {
+                PhoneNumberBox.BorderBrush = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 0, 0));
+            }
+        }
     }
 }

@@ -27,14 +27,14 @@
                            VerticalAlignment="Top">
                 <ToggleButton x:Name="GoToScale" x:Uid="Switch" Click="GoToScale_Click"/>
             </controls:SettingsCard>
-            <!--<controls:SettingsCard
+            <controls:SettingsCard
                    x:Uid="FontScale"
                    HeaderIcon="{ui:FontIcon Glyph=&#xE8D2;}"
                    IsEnabled="True"
                    Margin="0 10 50 10"
                    VerticalAlignment="Top">
                 <Button x:Name="GoToFontScale" x:Uid="Go" Click="GoToFontScale_Click"/>
-            </controls:SettingsCard>-->
+            </controls:SettingsCard>
         </StackPanel>
     </Grid>
 </Page>
